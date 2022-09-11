@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang = "en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+  <title>CRUDS</title>
+  <link rel='stylesheet' href='Style.css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class='container'>
+    <div class='header'>
+      <h1>cruds</h1>
+      <p>product management system</p>
+      <span id='theme'></span>
+    </div>
+    <div id='errors'></div>
+    <div class='inputs'>
+      <label>
+        <input type='text' placeholder='title' name='title' id='title' autofocus>
+      </label>
+
+      <div class='price'>
+        <label>
+          <input onkeyup="getTotal()" type='number' placeholder='price' name='price' id='price'  min='0'>
+        </label>
+
+        <label>
+          <input onkeyup="getTotal()" type='number' placeholder='0' name='taxes' id='taxes'  min='0'>
+        </label>
+
+        <label>
+          <input onkeyup="getTotal()" type='number' placeholder='0' name='ads' id='ads'  min='0'>
+        </label>
+
+        <label>
+          <input onkeyup="getTotal()" type='number' placeholder='0' name='discount'  id='discount' min='0'>
+        </label>
+        <span id='total'></span>
+      </div>
+
+      <label>
+        <input type='number' placeholder='count' name='count' id='count'  min='1'>
+      </label>
+
+      <label>
+        <input type='text' placeholder='category' name='category' id='category' >
+      </label>
+      <button id='create'>Create</button>
+
+      <div>
+        <button  id="magnifier"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <label>
+          <input id='search' type='search' placeholder='search'>
+        </label>
+
+<!--        <button  class='searchTit'>search by title</button>-->
+<!--        <button  class='searchCat'>search by category</button>-->
+
+        <span id='deleteBtn'></span>
+      </div>
+
+    </div>
+
+    <div class='products'>
+      <table>
+        <thead>
+        <tr>
+          <th>#id</th>
+          <th>title</th>
+          <th>price</th>
+          <th>taxes</th>
+          <th>ads</th>
+          <th>discount</th>
+          <th>total</th>
+          <th>category</th>
+          <th>update</th>
+          <th>delete</th>
+        </tr>
+        </thead>
+
+        <tbody id='tbody'>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <script src='Script.js'></script>
+</body>
+</html>
+
+
